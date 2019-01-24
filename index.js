@@ -33,38 +33,16 @@ app.on('ready', () =>{
 	});
 const { app, Menu } = require('electron');
   
-  const dockMenu = Menu.buildFromTemplate([
-    {
-      label: 'New Window',
-      click () { console.log('New Window'),ventana.show() }
-    }, {
-      label: 'New Window with Settings',
-      submenu: [
-        { label: 'Basic' },
-        { label: 'Pro' }
-      ]
-    },
-    { label: 'New Command...' }
-  ]);
+
   
 
   
   
-  app.dock.setMenu(dockMenu);
-
-	ventana.once('ready-to-show', () => {
-
-                
-		ventana.show();
-                
-	});
 
 
 
-	ventana.on('move', () => {
-		const posicion = ventana.getPosition();
-		console.log(`la posicion es ${ posicion }`);
-	});
+
+
 
 	ventana.on('closed',() =>{
 		ventana = null;
