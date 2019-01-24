@@ -1,0 +1,18 @@
+{
+  "name": "ednuxapp",
+  "version": "1.0.0",
+  "description": "Creador de Aplicaciones nativas",
+  "main": "index.js",
+  "scripts": {
+    "dev": "electron index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "eduardo",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^3.0.4",
+    "mysql": "^2.16.0",
+    "node-php-server": "^0.1.2",
+    "vuejs": "^3.0.1"
+  }
+}

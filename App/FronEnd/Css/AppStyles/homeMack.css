@@ -1,0 +1,202 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 9/10/2018, 07:11:01 PM
+    Author     : Eduardo
+*/
+
+
+.App{
+    background: #052352;
+
+}
+.itemApp{
+    font-size: 32px;
+    position: relative;
+    float: right;
+    top: 40px;
+    margin-left: 40px;
+    cursor: pointer;
+}
+.text{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;font-weight: 100; display:  block;
+    color:#64FFDA;
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: unset;
+    -moz-osx-font-smoothing: grayscale;
+    font-smoothing: antialiased;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+   
+}
+
+.nameApp{
+    font-size: 49px;
+    position: relative;
+    top: 25px;
+    cursor: pointer;
+}
+
+
+/* Maquetado */
+.cabezera{
+
+    width: 100%;
+   
+    height: 110px;
+
+}
+
+.contentAppName{
+    position: relative;
+    float: left;
+    left: 65px;
+
+    width: 200px;
+    height: 100px;
+}
+
+.menuContent{
+    position: relative;
+    float: right;
+    right: 75px;
+
+    width: 660px;
+    height: 100px;
+}
+.active{
+    color: #76FF03;
+    border-bottom: #76FF03 solid 2px;
+    cursor: pointer;
+}
+
+.cuerpo{
+    width: 100%;
+    height: 420px;
+}
+.contentMenud{
+    position: relative;
+    top: -10px;
+    float: left;
+    left: 45px;
+    width: 100px;
+
+}
+.media01{
+    width: 80px;
+    position: relative;
+}
+.contentMediaWeb{
+    position: relative;
+    top:30px;
+    float: left;
+    left: 40px;
+
+    height: 420px;
+    width: 550px;
+}
+.media02{
+    width: 530px;
+    position: relative;
+}
+.contentLexico{
+
+    width: 450px;
+    height: 420px;
+    position: relative;
+    float: right;
+    right: 45px;
+}
+.texto{
+
+
+
+    width: 100%;
+    height: 120px;
+
+}
+.contentButton{
+
+    width: 100%;
+    height: 140px;
+
+    
+    align-items: center;
+}
+.contentButton > button{
+    width: 250px;
+    height: 48px;
+    position: relative;
+    float: left;
+    left: 80px;
+    top:10px;
+
+
+    background: #F50057;
+
+    border-radius: 22px 22px 22px 22px;
+    -moz-border-radius: 22px 22px 22px 22px;
+    -webkit-border-radius: 22px 22px 22px 22px;
+    border: 0px solid #000000;
+    outline: none;
+    cursor: pointer;
+
+
+}
+.btText{
+    color: #FFFFFF;
+    font-size: 35px;
+    
+}
+.btText:link{
+    border-bottom: none;
+    outline: none;
+    
+}
+
+.pie{
+    width: 100%;
+    height: 45px;
+}
+
+.contentButton > button:hover{
+    background: #76FF03;
+  
+}
+.btText:hover{
+    color:#052352;
+}
+
+.btText:link{
+    text-decoration: none;
+}
+
+/* Pagina Selectores */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

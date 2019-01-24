@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<!--
+ @Author :: Eduardo Zamora
+ @License :: ENDsoftware
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="FronEnd/Css/main.css" rel="stylesheet" type="text/css"/>
+        <style>
+            body{ overflow-x:hidden;overflow-y:hidden;}
+            *{ margin: 0px; padding: 0px;}
+            .container{ display: flex;}
+            .titleBar{ width: 100%; height: 35px; -webkit-app-region:drag;}
+            .formInicioSession{ position: relative; width: 450px ; background: transparent; height: 350px; top: -610px; left: 30px;   border-radius: 16px 10px 0px 0px}
+            .formInicioSession > div > label{ font-size: 31px;}
+            .formInicioSession > div { width: 100%; height: 80px; background: transparent; margin-top: 30px;}
+            .formInicioSession > div > input{ width: 250px; height: 22px; background: transparent; border: none; color: #f5f5f5; border-bottom: 1.1px solid #76FF03; text-align: center; font-size: 21px; margin-left: 70px;  }
+            body > div.cuerpo > div.contentMediaWeb > form > div:nth-child(1) > input[type="text"]{ left: 50px; position: relative;}
+            body > div.cuerpo > div.contentMediaWeb > form > div:nth-child(2) > input[type="text"]{ left: 50px; position: relative;}
+            body > div.cuerpo > div.contentMediaWeb > form > div:nth-child(1) { position: relative; top: 60px; left: 30px;}
+
+
+
+            body > div.cuerpo > div.contentMediaWeb > form > input::-webkit-input-placeholder {
+
+                transition: all 0.3s ease-in-out;
+                position: relative;
+
+            }
+
+
+
+
+
+
+
+            body > div.cuerpo > div.contentMediaWeb > form > input {
+                margin: 45px 35px;
+                width: 400px;
+                display: block;
+                font-size: 19px;
+                border: none;
+                padding: 10px 0;
+                border-bottom: solid 1px #1abc9c;
+                transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+                background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, #1abc9c 4%);
+                background-position: -400px 0;
+                background-size: 400px 100%;
+                background-repeat: no-repeat;
+                color: white;
+                margin-top: 70px;
+                font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;font-weight: 100; display:  block;
+                color:#64FFDA;
+
+
+            }
+            body > div.cuerpo > div.contentMediaWeb > form > input:focus, input:valid {
+                box-shadow: none;
+                outline: none;
+
+            }
+
+            body > div.cuerpo > div.contentMediaWeb > form > input:focus::-webkit-input-placeholder, input:valid::-webkit-input-placeholder {
+
+                /*font-size: 19px;*/
+                /*-webkit-transform: translateY(-20px);
+                        transform: translateY(-20px);*/
+                visibility: visible !important;
+            }
+
+            body > div.cuerpo > div.contentMediaWeb > form > input[type="text"]:nth-child(1){
+                height: 45px;
+            }
+            body > div.cuerpo > div.contentMediaWeb > form > input[type="password"]:nth-child(2){
+                height: 45px;
+            }
+
+            .text{
+                font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;font-weight: 100; display:  block;
+                color:#64FFDA;
+                position: relative;
+                -webkit-font-smoothing: antialiased;
+                -moz-font-smoothing: unset;
+                -moz-osx-font-smoothing: grayscale;
+                font-smoothing: antialiased;
+                -webkit-backface-visibility: hidden;
+                -moz-backface-visibility: hidden;
+                backface-visibility: hidden;
+            }
+        </style>
+        <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    </head>
+
+    <body>
+        <div class="titleBar"></div>
+
+        <div class="cabezera" >
+            <div class="contentAppName" id="titleApp" >
+                <h1 class="text nameApp">{{ appName }}</h1>
+            </div>
+            <div class="menuContent">
+                <a class="text itemApp">log in</a>
+                <a class="text itemApp">sign up</a>
+                <a class="text itemApp active">home</a>
+            </div>
+        </div>
+
+        <div style="width: 100%; height: 5px;"></div>
+
+        <div id="homeContenido">
+            <div v-if="mostrar" class="cuerpo" >
+                <div class="contentMenud">
+                    <img class="media01" src="FronEnd/Media/HomeMedia/menuIMG@2x.png" alt=""/>
+                </div>
+                <div class="contentMediaWeb">
+                    <img class="media02" src="FronEnd/Media/HomeMedia/iPad – 1@2x.png" alt=""/>
+                </div>
+                <div class="contentLexico">
+                    <div style="width: 100%; height: 90px;"></div>
+                    <div class="texto" id="appInfo" >
+                        <h1 class="text" style="font-size: 49px; text-align: center;">{{ Mensaje }}</h1>
+                    </div>
+                    <div style="width: 100%; height: 10px;"></div>
+                    <div class="contentButton"><button><a class="text btText" style="text-decoration:none;" href="./App/FrontEnd/Html/selector.php">CREAR APP</a></button></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Login Content-->
+        <div id="loginContenido">
+            <div v-if="mostrar" class="cuerpo" >
+                <div class="contentMenud">
+                    <img class="media01" src="FronEnd/Media/HomeMedia/menuIMG@2x.png" alt=""/>
+                </div>
+                <div class="contentMediaWeb">
+
+                    <img class="media02"  src="FronEnd/Media/HomeMedia/HuaweiKONE@2x.png" alt=""/>
+                    <form style="margin-left: 60px; margin-top: 100px;" class="formInicioSession" action="" method="POST">
+                        
+                        <div>
+                            <label class="text">username</label>
+                            <input type="text" >
+                        </div>
+                           <div>
+                            <label class="text">password</label>
+                            <input type="text" >
+                        </div>
+                        
+
+                    </form>
+                </div>
+                <div class="contentLexico">
+                    <div style="width: 100%; height: 90px;"></div>
+                    <div class="texto">
+
+                        <img src="FronEnd/Media/HomeMedia/linea@2x.png" alt="" style="position: relative; left: -180px; display: none;"/>
+                        <h1 class="text" style="font-size: 49px; text-align: center;">Inicia session llenando los campos del formulario</h1>
+
+                        <img src="FronEnd/Media/HomeMedia/linea@2x.png" alt="" style="position: relative; left: -180px; top: 0px; display: none;"/>
+
+                    </div>
+                    <div style="width: 100%; height: 10px;"></div>
+                    <div class="contentButton">
+                        <button style="position: relative; top: 60px; width: 290px;"><a class="text btText" style="text-decoration:none;" href="./App/FrontEnd/Html/selector.php">INICIAR SESSION</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Login Content-->
+
+
+        <div style="width: 100%; height: 10px;"></div>
+
+        <div class="pie" style="background: #01579B; position: relative;">
+
+        </div>
+
+        <!-- Configuracion App-->
+        <script>
+            var title = new Vue({
+                el: '#titleApp',
+                data: {
+                appName: 'Ednux'
+                }
+            })
+            
+            var infoApp = new Vue({
+                el: '#appInfo',
+                data:{
+                    Mensaje: 'hello world!'
+                }
+            })
+            var appBlockLogin = new Vue({
+                el:'#loginContenido',
+                data:{
+                    mostrar: true
+                }
+            })
+            var appBlockHome = new Vue({
+                el: '#homeContenido',
+                data:{
+                    mostrar: false
+                }
+            })
+        </script>
+
+    </body>
+</html>
